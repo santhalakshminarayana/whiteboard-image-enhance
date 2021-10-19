@@ -1,4 +1,4 @@
-# White board color enhancement in Python
+# Whiteboard image color enhancement in Python
 White board color enhancement is based on this [ImageMagick command line gist](https://gist.github.com/lelandbatey/8677901)
 
 Converted following ImageMagick commands to **Python** and **OpenCV** by applying enhancement functions like
@@ -9,10 +9,10 @@ Converted following ImageMagick commands to **Python** and **OpenCV** by applyin
 ```bash
 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1
 ```
-Run **white_board_enhance.py** by passing _input_ and _output image path_
+Run **whiteboard_enhance.py** by passing _input_ and _output image path_
 
 ```shell
-$ python white_board_enhance.py -i input.jpg -o output.jpg
+$ python whiteboard_enhance.py -i input.jpg -o output.jpg
 ```
 
 ### Results
