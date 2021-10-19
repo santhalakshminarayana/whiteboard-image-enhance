@@ -184,8 +184,8 @@ def gamma(img, gamma_value):
     lut = np.array([((i / 255) ** i_gamma) * 255 for i in np.arange(0, 256)], dtype = 'uint8')
     return cv2.LUT(img, lut)
 
-def white_board_enhance(img):
-    '''Enhance White board image'''
+def whiteboard_enhance(img):
+    '''Enhance Whiteboard image'''
 
     # parameters for enhancing functions
     dog_k_size, dog_sigma_1, dog_sigma_2 = 15, 100, 0
@@ -222,7 +222,7 @@ if __name__ == "__main__":
     # read image
     img = cv2.imread(args.input_path)
     # apply enhancement
-    enhanced_img = white_board_enhance(img)
+    enhanced_img = whiteboard_enhance(img)
 
     # save result image
     cv2.imwrite(args.output_path, enhanced_img)
