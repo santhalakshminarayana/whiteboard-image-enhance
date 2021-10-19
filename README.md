@@ -1,5 +1,5 @@
 # Whiteboard image color enhancement in Python
-White board color enhancement is based on this [ImageMagick command line gist](https://gist.github.com/lelandbatey/8677901)
+Enhance whiteboard images by applying image-processing techniques. Whiteboard image color enhancement is based on this [ImageMagick command line gist](https://gist.github.com/lelandbatey/8677901)
 
 Converted following ImageMagick commands to **Python** and **OpenCV** by applying enhancement functions like
 - Difference of Gaussian (DoG)
@@ -19,8 +19,8 @@ $ python whiteboard_enhance.py -i input.jpg -o output.jpg
 
 <table border='0'>
   <tr>
-    <th>Input</th>
-    <th>Output</th>
+    <th>Original</th>
+    <th>Enhanced</th>
   </tr>
   <tr>
     <td><img src='https://github.com/santhalakshminarayana/white-board-enhance/blob/main/images/11.jpg' 
