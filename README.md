@@ -9,10 +9,10 @@ Converted following ImageMagick commands to **Python** and **OpenCV** by applyin
 ```bash
 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1
 ```
-Run **whiteboard_enhance.py** by passing _input_ and _output image path_
+Run **whiteboard_image_enhance.py** by passing _input_ and _output image path_
 
 ```shell
-$ python whiteboard_enhance.py -i input.jpg -o output.jpg
+$ python whiteboard_image_enhance.py -i input.jpg -o output.jpg
 ```
 
 ### Results
