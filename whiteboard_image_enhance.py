@@ -142,6 +142,19 @@ def contrast_stretch(img, black_point, white_point):
         
     return cv2.merge(ch_stretch)
 
+def fast_gaussian_blur(img, ksize, sigma):
+    '''Gussian blur using linear separable property of Gaussian distribution'''
+    
+    kernel_1d = cv2.getGaussianKernel(ksize, sigma)
+    return cv2.sepFilter2D(img, -1, kernel_1d, kernel_1d)
+
+def gamma(img, gamma_value):
+    '''Gamma correction of image'''
+    
+    i_gamma = 1 / gamma_value
+    lut = np.array([((i / 255) ** i_gamma) * 255 for i in np.arange(0, 256)], dtype = 'uint8')
+    return cv2.LUT(img, lut)
+
 def color_balance(img, low_per, high_per):
     '''Contrast stretch image by histogram equilization with black and white cap'''
     
@@ -170,19 +183,6 @@ def color_balance(img, low_per, high_per):
         cs_img.append(cs_ch)
         
     return cv2.merge(cs_img)
-
-def fast_gaussian_blur(img, ksize, sigma):
-    '''Gussian blur using linear separable property of Gaussian distribution'''
-    
-    kernel_1d = cv2.getGaussianKernel(ksize, sigma)
-    return cv2.sepFilter2D(img, -1, kernel_1d, kernel_1d)
-
-def gamma(img, gamma_value):
-    '''Gamma correction of image'''
-    
-    i_gamma = 1 / gamma_value
-    lut = np.array([((i / 255) ** i_gamma) * 255 for i in np.arange(0, 256)], dtype = 'uint8')
-    return cv2.LUT(img, lut)
 
 def whiteboard_enhance(img):
     '''Enhance Whiteboard image'''
