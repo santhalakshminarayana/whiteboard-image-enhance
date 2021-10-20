@@ -15,6 +15,8 @@ Run **whiteboard_image_enhance.py** by passing _input_ and _output image path_
 $ python whiteboard_image_enhance.py -i input.jpg -o output.jpg
 ```
 
+Read how to implement this in my blog [Whiteboard Image Enhancement](https://santhalakshminarayana.github.io/blog/whiteboard-image-enhancement-opencv-python)
+
 ### Results
 
 <table border='0'>
